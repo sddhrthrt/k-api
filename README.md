@@ -21,4 +21,19 @@
   - Delete deployment, patch service and patch ingresses
 - Write cli in Go (because I want to be able to write ground-up services in Go)
 
+## Usage:
+
+```
+python cli.py create
+python cli.py delete
+```
+
+The CLI object can also be used from code:
+
+```
+from service_cli import ServiceCLI
+s = ServiceCLI()
+s.create_deployment(s.create_deployment_object())
+s.create_service()
+```
 

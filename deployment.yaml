@@ -29,6 +29,7 @@ spec:
                         containers:
                                 - name: file-server
                                   image: localhost:5000/file-server:latest
+                                  imagePullPolicy: Always
                                   ports:
                                           - containerPort: 5000
 

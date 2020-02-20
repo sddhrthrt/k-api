@@ -6,6 +6,10 @@ app = Flask(__name__)
 def hello():
     return "Hello!"
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return "File Server: 404", 404
+
 def test():
     word = request.args.get('index')
     try:

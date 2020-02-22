@@ -10,13 +10,13 @@
 - Run `python cli.py create` to create a `file_server` instance.
 
 ## Todo:
-- Enable passing `path` and `file URL` args to docker (docker already accepts them, just need to accept those args from cli and pass them on to the `container` object.
-- Create ingress so as to access the API endpoint from `localhost`.
-- Enable multiple endpoints
+- [DONE] Enable passing `path` and `file URL` args to docker (docker already accepts them, just need to accept those args from cli and pass them on to the `container` object.
+- [DONE] Create ingress so as to access the API endpoint from `localhost`.
+- [DONE] Enable multiple endpoints
   - Add a deployment
   - Patch the service
-  - Add an ingress
-- Manage creation and deletion of multiple endpoints using `label` fields in metadata. 
+  - ~Add an~ Patch the ingress
+- [DONE] Manage creation and deletion of multiple endpoints using `label` fields in metadata. 
   - List endpoints based on `label` metadata.
   - Delete deployment, patch service and patch ingresses
 - Write cli in Go (because I want to be able to write ground-up services in Go)

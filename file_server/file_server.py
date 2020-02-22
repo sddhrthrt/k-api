@@ -10,7 +10,7 @@ def hello():
 def page_not_found(e):
     return "File Server: 404", 404
 
-def test():
+def nth_word():
     word = request.args.get('index')
     try:
         word = int(word)
@@ -24,6 +24,7 @@ if __name__ == "__main__":
     url = '/test'
     if len(sys.argv) > 1:
         url = os.path.join('/', sys.argv[1])
-    app.add_url_rule(url, 'test', view_func=test)
+    print(f"serving for URL path {url}...")
+    app.add_url_rule(url, 'nth_word', view_func=nth_word)
     contents = open("file.txt", 'r').read().split(' ')
     app.run(host='0.0.0.0')
